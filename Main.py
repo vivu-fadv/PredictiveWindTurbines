@@ -1,3 +1,4 @@
+
 ## libraries for reading and manipulating data
 import pandas as pd
 import numpy as np
@@ -44,3 +45,26 @@ test_generator_data = pd.read_csv("D:\Work\PredictiveWindTurbines\.venv\kaggle\i
 df_train = train_generator_data.copy()
 df_test= test_generator_data.copy()
 
+## lets preview our train data
+#print(df_train.head())
+
+## lets preview our test data
+#print(df_test.head())
+
+## lets the check the number of cols and rows for train data
+#print(f"Total Number Of Rows: {df_train.shape[0]} -> Total Number Of Cols: {df_train.shape[1]}")
+
+## lets the check the number of cols and rows for train data
+#print(f"Total Number Of Rows: {df_test.shape[0]} -> Total Number Of Cols: {df_test.shape[1]}")
+
+## findng a summary description of the train data
+#df_train.info()
+
+## lets check the number of duplicates in the train data
+#print(df_train.duplicated().sum())
+
+## lets check the number of duplicates in the test data
+df_test.duplicated().sum()
+
+## lets check for missing values in the train data
+df_train.isnull().sum()
