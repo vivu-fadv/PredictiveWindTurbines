@@ -64,7 +64,10 @@ df_test= test_generator_data.copy()
 #print(df_train.duplicated().sum())
 
 ## lets check the number of duplicates in the test data
-df_test.duplicated().sum()
+#print(df_test.duplicated().sum())
 
 ## lets check for missing values in the train data
-df_train.isnull().sum()
+#print(df_test.duplicated().sum())
+
+## lets check for missing values in the train data
+print(df_train.isnull().sum())
