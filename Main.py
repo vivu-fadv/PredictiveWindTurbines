@@ -70,4 +70,45 @@ df_test= test_generator_data.copy()
 #print(df_test.duplicated().sum())
 
 ## lets check for missing values in the train data
-print(df_train.isnull().sum())
+#print(df_train.isnull().sum())
+
+## lets check for missing values in the test data
+#print(df_test.isnull().sum())
+
+# plt.figure(figsize=(6, 4))
+#
+# sns.countplot(data=df_train, x="Target")
+#
+# plt.title('Histogram Distribution Of The Target Variable')
+# plt.xlabel('Train Target')
+# plt.ylabel('Frequency')
+
+#plt.show()
+
+## lets get the counts for each class of the target variable
+#print(df_train['Target'].value_counts())
+
+# plt.figure(figsize=(6, 4))
+#
+# sns.countplot(data=df_test, x="Target")
+# plt.title('Histogram Distribution Of The Target Variable For Test Data')
+# plt.xlabel('Test Target')
+# plt.ylabel('Frequency')
+#
+# plt.show()
+
+## lets get the counts for each class of the target variable
+#print(df_test['Target'].value_counts())
+
+## computing the summary statistics on train data
+#print(df_train.describe().round().T)
+
+## computing the summary statistics on train data
+#print(df_test.describe().round().T)
+
+## selecting only numerical columns from the train data
+numerical_train_data = df_train.select_dtypes(exclude=[object])
+
+## compute pearson correlation
+corr_matrix = numerical_train_data.corrwith(numerical_train_data['Target'])
+print(corr_matrix)
